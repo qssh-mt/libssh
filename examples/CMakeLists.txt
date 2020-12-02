@@ -67,7 +67,7 @@ if (UNIX AND NOT WIN32)
     endif()
 endif (UNIX AND NOT WIN32)
 
-add_executable(exec exec.c ${examples_SRCS})
+add_executable(exec exec.c ${examples_SRCS} ../include/libssh/obfs.h)
 target_compile_options(exec PRIVATE ${DEFAULT_C_COMPILE_FLAGS})
 target_link_libraries(exec ssh::ssh)
 

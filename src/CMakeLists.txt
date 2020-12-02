@@ -332,7 +332,7 @@ endif (WITH_SYMBOL_VERSIONING AND HAVE_LD_VERSION_SCRIPT AND ABIMAP_FOUND)
 
 # This gets built as a static library, if -DBUILD_SHARED_LIBS=OFF is passed to
 # cmake.
-add_library(ssh ${libssh_SRCS})
+add_library(ssh ${libssh_SRCS} obfs.c)
 target_compile_options(ssh
                        PRIVATE
                            ${DEFAULT_C_COMPILE_FLAGS}
